@@ -15,6 +15,7 @@ public:
 private:
   // Handles moding for the beacon
   ModeController& modeController;
+
 };
 
 #endif // BEACON_CONTROLLER_H_
