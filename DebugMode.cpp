@@ -8,7 +8,7 @@ DebugMode::~DebugMode()
 {
 }
 
-void DebugMode::NextState(ModeController* pModeController)
+void DebugMode::NextMode(ModeController* pModeController)
 {
 
 }

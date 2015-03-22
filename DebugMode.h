@@ -9,7 +9,7 @@ public:
   DebugMode();
   virtual ~DebugMode();
   
-  virtual void NextState(ModeController* pModeController = 0);
+  virtual void NextMode(ModeController* pModeController = 0);
 };
 
 #endif // DEBUG_MODE_H_
