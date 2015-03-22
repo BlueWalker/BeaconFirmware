@@ -8,6 +8,10 @@ class ModeController;
 class ModeInterface
 {
 public:
+  virtual ~ModeInterface()
+  {
+  }
+  
   virtual void NextMode(ModeController* pModeController = 0) = 0;
 
 };
