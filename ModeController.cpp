@@ -1,6 +1,6 @@
- 
- #include "ModeController.h"
- 
+
+#include "ModeController.h"
+
 ModeController::ModeController() : pCurrentMode(0)
 {
 }
@@ -21,5 +21,8 @@ const ModeInterface& ModeController::GetMode() const
   
 void ModeController::SetMode(ModeInterface* pMode)
 {
+  // Free the current mode
+  delete this->pCurrentMode;
+  
   this->pCurrentMode = pMode;
 }
