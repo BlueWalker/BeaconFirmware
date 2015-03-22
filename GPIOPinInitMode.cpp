@@ -1,4 +1,5 @@
 #include "GPIOPinInitMode.h"
+#include "TransmitMode.h"
 
 GPIOPinInitMode::GPIOPinInitMode(int pinNumber) :
   pinNumber(pinNumber)
@@ -13,6 +14,8 @@ void GPIOPinInitMode::NextMode(ModeController* pModeController)
 {
   // Determine the next mode to run by looking at the value
   // of the pin at the specified pin number, then call
-  // pModeController's NextMode() function.
+  // pModeController's SetMode() function.
+  
+  pModeController->SetMode(new TransmitMode());
   
 }
