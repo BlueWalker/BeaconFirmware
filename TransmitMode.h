@@ -3,6 +3,7 @@
 
 #include "ModeInterface.h"
 #include "ModeController.h"
+#include "ble_gap.h"
 
 class TransmitMode : public ModeInterface
 {
@@ -10,7 +11,10 @@ public:
   TransmitMode();
   virtual ~TransmitMode();
   
-  virtual void NextState(ModeController* pModeController = 0);
+  virtual void NextMode(ModeController* pModeController = 0);
+  
+private:
+  ble_gap_adv_params_t  bleAdvParams;
 };
 
 #endif // TRANSMIT_MODE_H_
